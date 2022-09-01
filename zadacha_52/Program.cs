@@ -1,8 +1,10 @@
 ﻿Console.Write("Введите число m: ");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число n: ");
+int n = Convert.ToInt32(Console.ReadLine());
 
-int n = Convert.ToInt32(Console.ReadLine());Console.WriteLine($"m = {m}, n = {n}.");
+Console.WriteLine($"m = {m}, n = {n}.");
+
 double [,] array = new double [m,n];
 CreateArrayDouble(array);
 
@@ -33,8 +35,8 @@ for (int i = 0;i < n;i++)
       {
             ariphmeticMean +=arrayWhole[j,i];
       }
-      ariphmeticMean = Math.Round(ariphmeticMean / m, 1);
-
+      ariphmeticMean = Math.Round(ariphmeticMean / m, 1 );
+      Console.WriteLine($"столбца №  {i+1} | {ariphmeticMean}");
 }
 
 int[,] TransformationArrayWhole(double[,] array)
